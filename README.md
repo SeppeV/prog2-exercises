@@ -12,7 +12,7 @@ De volgende functies dienen geschreven te worden:
 - bmi
 
 
-Om de testen uit te voeren dienen jullie pytest
+Om de testen uit te voeren dienen jullie pytestgg
 te installeren:
 
 ```bash
