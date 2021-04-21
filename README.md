@@ -1,4 +1,6 @@
-# prog2-exercises
+# 5IICT PROG2
+
+## Oefeningen
 
 Schrijf code zodat de testen slagen.
 
@@ -16,7 +18,7 @@ Om de testen uit te voeren dienen jullie pytestgg
 te installeren:
 
 ```bash
-pip install pytest
+pip install pytest pytest-cov coverage
 ```
 
 Nadien kunnen jullie de testen als volgt uitvoeren:
