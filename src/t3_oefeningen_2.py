@@ -2,44 +2,23 @@ import math
 
 
 def is_even(x):
-    """Geef True als x even is, anders False"""
-    return True
+    if x % 2 == 0:
+        return True
+    else:
+        return False
 
 
 def is_oneven(x):
-    """Geef True als x oneven is, anders False"""
-    # Implementeer deze functie gebruik makend van is_even
-    return True
-
-def oppervlakte_vierkant(zijde):
-    resultaat = zijde ** 2
-    return resultaat
-
-def volume_kubus(zijde):
-    resultaat = zijde ** 3
-    if resultaat < 0:
-        resultaat = 0
-        return resultaat
+    resultaat = is_even(x)
+    if resultaat == True:
+        return False
     else:
-        return resultaat
+        return True
+
 
 def volume_bol(r):
     """Return volume bol met straal r"""
     return 0
-
-
-def oppervlakte_cirkel(r):
-    resultaat = r ** 2 * math.pi
-    return resultaat
-
-
-def omtrek_cirkel(r):
-    resultaat = 2 * r * math.pi
-    return resultaat
-
-def volume_cilinder(r, h):
-    resultaat = math.pi * r ** 2 h
-    return resultaat
 
 
 def volume_donut(r, R):
