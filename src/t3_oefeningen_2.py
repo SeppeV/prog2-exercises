@@ -1,4 +1,4 @@
-# import math
+import math
 
 
 def is_even(x):
@@ -11,6 +11,17 @@ def is_oneven(x):
     # Implementeer deze functie gebruik makend van is_even
     return True
 
+def oppervlakte_vierkant(zijde):
+    resultaat = zijde ** 2
+    return resultaat
+
+def volume_kubus(zijde):
+    resultaat = zijde ** 3
+    if resultaat < 0:
+        resultaat = 0
+        return resultaat
+    else:
+        return resultaat
 
 def volume_bol(r):
     """Return volume bol met straal r"""
@@ -18,15 +29,17 @@ def volume_bol(r):
 
 
 def oppervlakte_cirkel(r):
-    """Return oppervlakte cirkel met straal r"""
-    # Deze functie kan je gebruiken om het volume van de donut te berekenen.
-    return 0
+    resultaat = r ** 2 * math.pi
+    return resultaat
 
 
 def omtrek_cirkel(r):
-    """Return omtrek cirkel met straal r"""
-    # Deze functie kan je gebruiken om het volume van de donut te berekenen.
-    return 0
+    resultaat = 2 * r * math.pi
+    return resultaat
+
+def volume_cilinder(r, h):
+    resultaat = math.pi * r ** 2 h
+    return resultaat
 
 
 def volume_donut(r, R):

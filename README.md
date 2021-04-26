@@ -1,6 +1,4 @@
-# 5IICT PROG2
-
-## Oefeningen
+# prog2-exercises
 
 Schrijf code zodat de testen slagen.
 
