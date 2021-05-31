@@ -73,10 +73,14 @@ def rekeningnummer_hoofdgetal(n):
     Voor het rekeningnummer van Telenet is dit bijvoorbeeld:
     Gegeven 405-0504611-48, dient het resultaat 4050504611 te zijn.
     """
-    return 0
+
+    m = n.replace("-", "")
+
+    return int(m[0:-2])
 
 
 def is_geldig_rekeningnummer(n):
+
     """Geef True terug als het rekeningnummer geldig is, anders False.
 
     Een rekeningnummer is geldig als de deling van het hoofdgetal
@@ -90,7 +94,10 @@ def is_geldig_rekeningnummer(n):
     Gegeven 405-0504611-48, dient de rest bij deling van 4050504611 door 97
     48 te zijn.
     """
-    return 0
+
+    if rekeningnummer_hoofdgetal(n) % 97 == rekeningnummer_controlegetal(n):
+        return True
+    return False
 
 
 def is_anagram(word1, word2):
