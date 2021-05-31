@@ -17,22 +17,47 @@ def is_oneven(x):
 
 
 def volume_bol(r):
-    """Return volume bol met straal r"""
-    return 0
+    if r < 0:
+        return -1
+    else:
+        resultaat = (4/3) * pi * r**3
+        return resultaat
+
+
+def oppervlakte_cirkel(r):
+    if r < 0:
+        return -1
+    else:
+        resultaat = pi * r**2
+        return resultaat
+
+
+def omtrek_cirkel(r):
+    if r < 0:
+        return -1
+    else:
+        resultaat = 2 * r * pi
+        return resultaat
 
 
 def volume_donut(r, R):
-    """Return volume donut met straal r en R
-    waarbij r de dikte van de donut is, en R
-    de grootte van de donut.
-    """
-    return 0
+    if r < 0:
+        return -1
+    elif R < 0:
+        return -1
+    elif r == R:
+        return -1
+    else:
+        resultaat = 2 * pi**2 * r**2 * R
+        return resultaat
 
 
 def stats(punten):
-    """Return het gemiddelde, het maximum, het minimum en het aantal getallen
-    als een lijst met punten gegeven werd."""
-    return 0
+    gemiddelde = sum(punten) / len(punten)
+    maximum = max(punten)
+    minimum = min(punten)
+    aantal = len(punten)
+    return gemiddelde, maximum, minimum, aantal
 
 
 class Cirkel:
@@ -40,25 +65,30 @@ class Cirkel:
         self.straal = r
 
     def omtrek(self):
-        """Return de omtrek van de cirkel met straal r"""
-        return 0
+        result = pi * 2 * self.straal
+        return result
 
     def oppervlakte(self):
-        """Return de oppervlakte van de cirkel met straal r"""
-        return 0
+        result = self.straal**2 * pi
+        return result
 
     def __str__(self):
-        """Return een string zoals aangegeven in de testen"""
-        return ""
+        return f"cirkel van de straal is {self.straal}"
 
 
 def pythagoras(a, b):
-    """Return de lengte van de schuine zijde als de lengtes
-    van de rechthoekszijden gegeven zijn door a en b"""
-    return 0
+    if a < 0:
+        return -1
+    elif b < 0:
+        return -1
+    else:
+        regel = (a**2) + (b**2)
+        resultaat = (regel)
+        return resultaat
 
 
 def is_palindroom(woord):
-    """Return True als het omgekeerde van het woord gelijk
-    is aan het woord zelf. Return anders False."""
-    return True
+    def isPalindroom(s):
+        return s == s[::-1]
+    ans = isPalindroom(woord)
+    return ans
