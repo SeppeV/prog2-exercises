@@ -58,9 +58,10 @@ def rekeningnummer_controlegetal(n):
     068-9099786-49
     """
 
+    controlegetal = [n]
+    print(controlegetal[-2:])
 
-
-    return 0
+    return controlegetal
 
 
 def rekeningnummer_hoofdgetal(n):
