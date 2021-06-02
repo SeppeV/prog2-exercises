@@ -125,4 +125,15 @@ def is_anagram(word1, word2):
 
     https://nl.wikipedia.org/wiki/Anagram
     """
-    return 0
+
+    word1 = word1.lower()
+    word2 = word2.lower()
+    word1 = word1.replace(" ", "")
+    word2 = word2.replace(" ", "")
+    word1 = sorted(word1)
+    word2 = sorted(word2)
+
+    if word1 == word2:
+        return True
+
+    return False
